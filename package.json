@@ -4,5 +4,12 @@
   "version": "0.0.1",
   "author": "devcat <cat@tsu.ink>",
 
-  "dependencies": {}
+  "dependencies": {
+    "ws": "^7.1.2",
+    "raven": "^2.6.4",
+    "httpie": "^1.1.2",
+    "wise-river": "^1.0.1",
+    "bufferutil": "^4.0.1",
+    "detritus-client": "^0.9.34"
+  }
 }
