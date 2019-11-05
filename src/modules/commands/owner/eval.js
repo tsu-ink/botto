@@ -11,7 +11,7 @@ cmd.main({
   aliases: ['e'],
   label: 'script',
   responseOptional: true,
-  
+
   pre(ctx) {
     return ctx.client.isOwner(ctx.userId);
   },
@@ -42,12 +42,12 @@ cmd.main({
       if (inspected.length > 1950) inspected = i(content, 0);
 
       content = inspected;
-    };
+    }
 
     content = content.replace(rtoken, 'ッ');
   } catch (err) { content = err.message; } finally {
     content = content.substring(0, 1950);
-    return ctx.editOrReply(`\`\`\`js\n${content}\`\`\``);
+    ctx.editOrReply(`\`\`\`js\n${content}\`\`\``);
   }
 });
 
@@ -63,6 +63,5 @@ cmd.sub('reload-commands', {
   try {
     await ctx.commandClient.addMultipleIn('./modules/commands', { subdirectories: true });
     ctx.editOrReply(`reloaded ${ctx.commandClient.commands.length} commands`);
-  } catch (err) { console.log('failed reload', err.errors) }
-
+  } catch (err) { console.log('failed reload', err.errors); }
 });

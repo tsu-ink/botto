@@ -47,7 +47,7 @@ const commands = new CommandClient(process.env.token, {
 
   try {
     await commands.run();
-    console.log('C|' + manager.clusterId, 'S|' + cluster.shards.map(s => s.shardId).join(' '));
+    console.log(`C|${manager.clusterId}`, `S|${cluster.shards.map(s => s.shardId).join(' ')}`);
   } catch (err) {
     console.error(err);
   }

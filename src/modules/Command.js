@@ -57,6 +57,6 @@ class Command {
       responseOptional,
     };
   }
-};
+}
 
 module.exports = Command;

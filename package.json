@@ -11,5 +11,9 @@
     "wise-river": "^1.0.1",
     "bufferutil": "^4.0.1",
     "detritus-client": "^0.9.34"
+  },
+
+  "devDependencies": {
+    "eslint": "^6.6.0"
   }
 }
